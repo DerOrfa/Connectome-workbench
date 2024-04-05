@@ -1,7 +1,7 @@
 #
 # Minimum required version of CMAKE
 #
-CMAKE_MINIMUM_REQUIRED (VERSION 3.0)
+CMAKE_MINIMUM_REQUIRED (VERSION 3.11)
 
 #
 # Project name
@@ -19,6 +19,11 @@ SET(WB_CMAKE_VERBOSE_OUTPUT_FLAG TRUE)
 # Unknown CMake command "CHECK_CXX_COMPILER_FLAG"
 #
 include(CheckCXXCompilerFlag)
+
+set(OpenGL_GL_PREFERENCE "GLVND")
+
+# add dependencies
+include(cmake/CPM.cmake)
 
 ##########################################################################################
 #
